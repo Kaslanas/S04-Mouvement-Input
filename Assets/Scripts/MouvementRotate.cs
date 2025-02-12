@@ -7,6 +7,6 @@ public class MouvementRotate : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0f, Time.deltaTime * 10f, 0f);
+        transform.Rotate(Time.deltaTime * 1000f, Time.deltaTime * 1000f, Time.deltaTime * 1000f, Space.World);
     }
 }

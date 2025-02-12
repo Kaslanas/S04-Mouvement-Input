@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class MouvementTranslateWorld : MonoBehaviour
 {
-    void Update()
-    {
-        transform.Translate(1f * Time.deltaTime, 0, 0, Space.World);
 
-        //Vector3 deplacement = new Vector3(1f, 0, 0);
-        //transform.Translate(deplacement * Time.deltaTime, Space.World);
+    //public float x = 0f;
+
+    //public float y = 0f;
+
+    //public float z = 0f;
+
+    //void Update()
+    //{
+    //    transform.Translate(x * Time.deltaTime, y * Time.deltaTime, z*Time.deltaTime, Space.World);
+
+    //    //Vector3 deplacement = new Vector3(1f, 0, 0);
+    //    //transform.Translate(deplacement * Time.deltaTime, Space.World);
+    //}
+    [SerializeField] private Vector3 _deplacement;
+
+
+    private void Update()
+    {
+
+        transform.Translate(_deplacement * Time.deltaTime, Space.World);
+
+
     }
+
 }
